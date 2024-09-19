@@ -7,7 +7,6 @@ import (
 
 const testFilePath = "./War_and_Peace.txt"
 
-// Benchmarking the wordCount function
 func BenchmarkWordCount(b *testing.B) {
 	file, err := os.Open(testFilePath)
 	if err != nil {

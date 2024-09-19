@@ -12,13 +12,11 @@ import (
 
 const filepath = "./War_and_Peace.txt"
 
-// WordCount хранит слово и его частоту
 type WordCount struct {
 	Word  string
 	Count int
 }
 
-// wordCounts считывает данные и подсчитывает частоту слов
 func wordCounts(r io.Reader) (map[string]int, error) {
 	wordCount := make(map[string]int)
 	scanner := bufio.NewScanner(r)
@@ -38,7 +36,6 @@ func wordCounts(r io.Reader) (map[string]int, error) {
 	return wordCount, nil
 }
 
-// sortByValue сортирует мапу по значениям и возвращает топ-10 слов
 func sortByValue(m map[string]int) []WordCount {
 	var counts []WordCount
 	for word, count := range m {
